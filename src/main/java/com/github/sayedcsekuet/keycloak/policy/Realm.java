@@ -7,6 +7,7 @@ import java.util.stream.Stream;
 import org.keycloak.common.enums.SslRequired;
 import org.keycloak.component.ComponentModel;
 import org.keycloak.models.*;
+import org.keycloak.models.RealmModel;
 
 public class Realm implements RealmModel {
 
@@ -623,20 +624,21 @@ public class Realm implements RealmModel {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    @Override
-    public Stream<String> getDefaultRolesStream() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+    // @Override
+    // public Stream<String> getDefaultRolesStream() {
+    //     throw new UnsupportedOperationException("Not supported yet.");
+    // }
 
-    @Override
-    public void addDefaultRole(String name) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
-    @Override
-    public void removeDefaultRoles(String... defaultRoles) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    // @Override
+    // public void addDefaultRole(String name) {
+    //     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    // }
+
+    // @Override
+    // public void removeDefaultRoles(String... defaultRoles) {
+    //     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    // }
 
     @Override
     public void addDefaultGroup(GroupModel group) {
@@ -1057,6 +1059,11 @@ public class Realm implements RealmModel {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    /**
+     * Time in seconds since epoc
+     *
+     * @return
+     */
     @Override
     public int getNotBefore() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -1086,6 +1093,7 @@ public class Realm implements RealmModel {
     public void setEventsExpiration(long expiration) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
 
     @Override
     public Stream<String> getEventsListenersStream() {
@@ -1219,10 +1227,11 @@ public class Realm implements RealmModel {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    @Override
-    public Stream<GroupModel> searchForGroupByNameStream(String s, Integer integer, Integer integer1) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+
+    // @Override
+    // public Stream<GroupModel> searchForGroupByNameStream(String s, Integer integer, Integer integer1) {
+    //     throw new UnsupportedOperationException("Not supported yet.");
+    // }
 
     @Override
     public boolean removeGroup(GroupModel group) {
@@ -1318,4 +1327,75 @@ public class Realm implements RealmModel {
     public void decreaseRemainingCount(ClientInitialAccessModel clientInitialAccessModel) {
 
     }
+
+    @Override
+    public Stream<RequiredActionConfigModel> getRequiredActionConfigsStream() {
+        // your implementation
+        return null; // Replace with your actual implementation
+    }
+
+    @Override
+    public void updateRequiredActionConfig(RequiredActionConfigModel model) {
+        // your implementation
+    }
+
+    @Override
+    public void removeRequiredActionProviderConfig(RequiredActionConfigModel model) {
+        // your implementation
+    }
+
+    @Override
+    public RequiredActionConfigModel getRequiredActionConfigByAlias(String id) {
+        // your implementation
+        return null; // Replace with your actual implementation
+    }
+
+    @Override
+    public RequiredActionConfigModel getRequiredActionConfigById(String id) {
+        // your implementation
+        return null; // Replace with your actual implementation
+    }
+
+    @Override
+    public void setFirstBrokerLoginFlow(AuthenticationFlowModel flow) {
+        // your implementation
+    }
+
+    @Override
+    public AuthenticationFlowModel getFirstBrokerLoginFlow() {
+        // your implementation
+        return null; // Replace with your actual implementation
+    }
+
+    @Override
+    public Stream<ClientModel> searchClientByAuthenticationFlowBindingOverrides(Map<String, String> overrides, Integer firstResult, Integer maxResults) {
+        // your implementation
+        return null; // Replace with your actual implementation
+    }
+
+    @Override
+    public void setMaxTemporaryLockouts(int maxTemporaryLockouts) {
+        // your implementation
+    }
+
+    @Override
+    public int getMaxTemporaryLockouts() {
+        // your implementation
+        return 0; // Replace with your actual implementation
+    }
+
+    @Override
+    public void setOrganizationsEnabled(boolean organizationsEnabled) {
+        // your implementation
+    }
+
+    @Override
+    public boolean isOrganizationsEnabled() {
+        // your implementation
+        return false; // Replace with your actual implementation
+    }
+
+
+
+
 }
